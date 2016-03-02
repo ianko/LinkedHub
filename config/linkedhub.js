@@ -23,7 +23,7 @@ module.exports.linkedhub = {
     limit: 100,
 
     // for development, we will limit this calls
-    maxPages: 1
+    maxPages: 3
   }
 
 };
