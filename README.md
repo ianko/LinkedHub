@@ -41,7 +41,7 @@ The API will receive `POST` calls on the `/parse` endpoint. The expected payload
 
 The response has three main attributes:
 
-```json
+```
 {
   "linkedin": {}, // the scraped linkedin profile
   "github": {}, // the github profile fetched from the API
