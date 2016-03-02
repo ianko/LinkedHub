@@ -25,5 +25,3 @@ $ sails lift
 ### Configuration:
 
 Open the `config/linkedhub.js` file and update with the preferred authenticate object. See https://github.com/mikedeboer/node-github for options.
-
-The database is configured on the `config/connections.js` file.
