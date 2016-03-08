@@ -1,0 +1,22 @@
+<div class="loader-holder" ng-class="{ 'hidden': !submitingForm }"><div class="loader">Loading</div></div>
+
+<div class="container">
+    <div class="col-md-offset-3 col-md-6">
+        <div class="login-holder" ng-class="{ 'active': submitingForm }">
+
+            <div class="logo">
+                <img src="/images/logo.png" />
+            </div>
+
+            <div class="tagline">
+              <span>Match skills from the user's LinkedIn account with the projects starred on GitHub to make sure they are really into that specific programming language.</span>
+            </div>
+
+            <lh-form></lh-form>
+
+            <div class="details">
+              <span>This project was developed during the NeoReach MEAN Hack night and is available as a proof of concept. The search is limited to 100 stars and the GitHub API may limit the requests in certain period.</span>
+            </div>
+        </div>
+    </div>
+</div>

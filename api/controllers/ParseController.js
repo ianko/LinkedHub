@@ -26,6 +26,9 @@ module.exports = {
       return res.badRequest('The GitHub account is required.');
     }
 
+    // authenticate right away
+    GithubService.authenticate();
+
     // Scrape of the linkedin profile page and get github profile
     Promise
       .all([

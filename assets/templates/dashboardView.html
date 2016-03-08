@@ -1,0 +1,88 @@
+<div ng-controller="DashboardController">
+
+    <div class="col-md-offset-2 col-md-8">
+        <div class="main-holder">
+
+            <div class="user-info">
+                <div class="user-picture">
+                    <img ng-src="{{ avatar }}" />
+                </div>
+                <div class="user-name">{{ name }}</div>
+                <div class="user-sub">{{ headline }}</div>
+            </div>
+
+            <div class="row status-boxes">
+
+                <div class="col-sm-3">
+
+                    <div class="fork-box">
+                        <strong><img src="images/gist-icon.png" /> {{ gist }}</strong>
+                        <span>Gists</span>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+
+                    <div class="repo-box">
+                        <strong><img src="images/repo-icon.png" /> {{ repo }}</strong>
+                        <span>Repositories</span>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+
+                    <div class="following-box">
+                        <strong><img src="images/following-icon.png" /> {{ following }}</strong>
+                        <span>Following</span>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+
+                    <div class="followers-box">
+                        <strong><img src="images/followers-icon.png" /> {{ followers }}</strong>
+                        <span>Followers</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row p-l-15 p-r-25">
+                <div class="languages-holder">
+                  <h2>Languages in LinkedIn skills</h2>
+
+                    <div class="languages">
+                        <div ng-repeat="(key, value) in skills">
+                            <div class="langsWrapper col-sm-6">
+                                <img ng-src="logos/{{ key }}.svg" onerror='this.style.display="none"' />
+                                <label>{{ key }}</label>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: {{ value }}%">{{ value }}%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row p-l-15 p-r-25">
+                <div class="languages-holder">
+                  <h2>Other languages</h2>
+
+                    <div class="languages">
+                        <div ng-repeat="(key, value) in others">
+                            <div class="langsWrapper col-sm-6">
+                                <img ng-src="logos/{{ key }}.svg" onerror='this.style.display="none"' />
+                                <label>{{ key }}</label>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: {{ value }}%">{{ value }}%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

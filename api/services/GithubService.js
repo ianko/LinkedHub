@@ -43,7 +43,13 @@ module.exports = {
   ****************************************************************************/
 
   authenticate: function authenticate(user) {
-    github.authenticate(sails.config.linkedhub.github.authenticate);
+    var auth = sails.config.linkedhub.github.authenticate;
+
+    if (_.isArray(auth)) {
+      auth = _.sample(auth);
+    }
+
+    github.authenticate(auth);
   },
 
   /****************************************************************************
@@ -117,7 +123,10 @@ module.exports = {
       _this.getStars(user, technologies, function(err, counts) {
         if (err) return cb && cb(err);
 
-        cb && cb(null, counts);
+        cb && cb(null, {
+          skills: _.pick(counts.languages, langs),
+          others: _.omit(counts.languages, langs)
+        });
       });
     })
     .catch(function(err) {

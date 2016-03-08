@@ -1,0 +1,12 @@
+<form ng-controller="HomeController">
+    <div class="login-form">
+        <div class="form-group">
+            <input type="text" class="form-control linkedin-icon" ng-model="linkedin" placeholder="ie: https://www.linkedin.com/in/{USERNAME}" />
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control github-icon" ng-model="github" placeholder="ie: https://github.com/{USERNAME}" />
+        </div>
+
+        <button class="btn btn-primary btn-block" ng-click="getResults(this)">GO</button>
+    </div>
+</form>
