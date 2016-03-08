@@ -49,4 +49,11 @@ The response has three main attributes:
 }
 ```
 
+## Contributors:
+[Bruno Genaro](https://github.com/brunogenaro)
 
+[Eduardo Damianik](https://www.linkedin.com/in/eduardo-damianik-0ba9b548)
+
+[Filipe Perina](https://github.com/FilipePerina)
+
+[Ianko Leite](https://github.com/ianko)
