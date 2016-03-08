@@ -1,5 +1,5 @@
 {
-  "name": "LinkedHub API",
+  "name": "linkedhub",
   "private": true,
   "version": "0.0.1",
   "description": "A Sails application that fetches a LinkedIn public profile and a github account.",
